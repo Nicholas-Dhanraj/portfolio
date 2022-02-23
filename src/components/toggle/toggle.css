@@ -1,0 +1,35 @@
+.toggle {
+  width: 60px;
+  height: 27px;
+  border-radius: 20px;
+  border: 2px solid rgb(106, 181, 216);
+  background-color: aliceblue;
+  position: relative;
+  top: 0px;
+  right: 10px;
+  /* 
+  position: fixed;
+  top: 10px;
+  right: 10px; */
+
+  z-index: 7;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.t-icon {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+
+.t-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #445050;
+  position: absolute;
+  cursor: pointer;
+  /* right: 0; */
+}

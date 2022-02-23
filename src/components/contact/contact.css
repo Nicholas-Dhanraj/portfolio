@@ -1,0 +1,142 @@
+.contact {
+  height: 100vh;
+  position: relative;
+}
+
+.c-bg {
+  width: 20px;
+  height: 100%;
+  background-color: rgb(200, 209, 216);
+  position: absolute;
+}
+
+.c-wrapper {
+  padding: 50px;
+  display: flex;
+}
+
+.c-left {
+  flex: 1;
+  padding-left: 40px;
+}
+
+.c-right {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  /* background-color: hsl(33, 59%, 93%); */
+}
+
+.c-title {
+  font-size: 60px;
+  width: 80%;
+  margin-top: 75px;
+}
+.darkmode::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+.lightmode::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.c-info-item {
+  display: flex;
+  align-items: center;
+  margin: 50px 0px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.c-icon {
+  width: 70px;
+  height: 70px;
+  margin-right: 25px;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+}
+.filter-green {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
+}
+.c-desc {
+  font-weight: 300;
+  font-size: 1.3rem;
+  padding-left: 5px;
+  margin-top: 75px;
+}
+
+form {
+  margin-top: 20px;
+  padding-left: 5px;
+}
+
+input {
+  width: 50%;
+  height: 50px;
+  margin: 10px 0px;
+  font-size: 1em;
+  padding-left: 10px;
+}
+
+::placeholder {
+  font-size: 1em;
+}
+
+textarea {
+  width: 95%;
+  margin: 10px 0px;
+  font-size: 1em;
+  padding-left: 10px;
+}
+
+.button {
+  width: 25%;
+  font-size: 1em;
+  padding: 15px;
+  margin: 0px 0px 15px 0px;
+  background-color: rgb(217, 227, 235);
+  color: rgb(182, 133, 113);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .c-wrapper {
+    flex-direction: column;
+    padding: 0px 50px;
+  }
+  .c-title {
+    font-size: 30px;
+  }
+  .c-info-item {
+    margin: 20px 0px;
+  }
+  .c-desc {
+    display: none;
+  }
+  form {
+    margin-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  input {
+    width: 35%;
+    height: 40px;
+    margin: 10px;
+    margin-left: 0;
+  }
+  button {
+    width: 35%;
+  }
+  .c-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+  }
+  .c-left {
+    padding-left: 5px;
+  }
+}

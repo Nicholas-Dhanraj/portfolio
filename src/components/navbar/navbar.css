@@ -1,0 +1,16 @@
+.nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  transition-timing-function: ease-in;
+  transition: 2.1s;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav__blue {
+  transition: 5.1s;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+}

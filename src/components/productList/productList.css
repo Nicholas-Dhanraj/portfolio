@@ -1,0 +1,41 @@
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.pl-texts {
+  width: 100%;
+}
+
+.pl-title {
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.pl-desc {
+  margin: 0px 0px;
+  font-size: 1.1em;
+}
+
+.pl-list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  width: 100vw;
+}
+
+@media screen and (max-width: 480px) {
+  .product-list {
+    padding: 10px;
+  }
+  .pl-texts {
+    width: 100%;
+  }
+  .pl-desc {
+    display: none;
+  }
+}
