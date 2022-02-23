@@ -62,10 +62,10 @@ function App() {
     setTimeout(() => {
       setLoading(false);
       // tl.to(imageReveal, 3, { opacity: 0, ease: Power2.easeOut, delay: 0 });
-    }, 1070);
+    }, 10700);
     setTimeout(() => {
       tl.to(imageReveal, 1, { opacity: 0, ease: Power2.easeOut });
-    }, 1000);
+    }, 10000);
   }, []);
 
   useEffect(() => {
