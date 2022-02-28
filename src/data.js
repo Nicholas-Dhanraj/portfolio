@@ -21,7 +21,7 @@ export const products = [
   {
     id: 3,
     img: Discover,
-    link: "http://google.com",
+    link: "discover-africa.netlify.app",
     tags: ["all", "react", "framer", "gsap"],
     msg: "",
   },
