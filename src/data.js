@@ -14,14 +14,14 @@ export const products = [
   {
     id: 2,
     img: Chair,
-    link: "http://google.com",
+    link: "https://chairs-r3f.netlify.app/",
     tags: ["all", "react", "framer", "r3f"],
     msg: "",
   },
   {
     id: 3,
     img: Discover,
-    link: "discover-africa.netlify.app",
+    link: "https://discover-africa.netlify.app/",
     tags: ["all", "react", "framer", "gsap"],
     msg: "",
   },
