@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 // import { ReactComponent as Logo } from "../../anime.svg";
-
+import { motion } from "framer-motion";
 import "./intro.css";
 import Img from "../../img/study.png";
 import { ThemeContext } from "../../context";
@@ -31,32 +31,66 @@ const Intro = () => {
 
   const [active, setActive] = useState(false);
   const myMesh = React.useRef();
+
+  const variants = {
+    visible: {
+      y: 0,
+      transition: {
+        type: "spring",
+        ease: [0.455, 0.03, 0.515, 0.955],
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+        duration: 0.7,
+      },
+    },
+    hidden: {
+      y: -50,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+  const item = {
+    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0, x: -100 },
+  };
   return (
     <div className="intro">
       {/* <JumpToSection /> */}
 
       <div className="i-left">
-        <div className="i-left-wrapper">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          variants={variants}
+          className="i-left-wrapper"
+        >
           {/* <h2 className="i-i">Hello, world!</h2> */}
           {/* <Logo className="main" /> */}
-          <h4
+          <motion.h4
+            variants={item}
             style={{
               color: darkMode && "#00EE00",
+              fontWeight: 500,
             }}
           >
             Hi, my name is
-          </h4>
-          <h1 className="i-name"> Nicholas Dhanraj</h1>
-          <div className="i-description">
+          </motion.h4>
+          <motion.h1 className="i-name" variants={item}>
+            {" "}
+            Nicholas Dhanraj
+          </motion.h1>
+          <motion.div variants={item} className="i-description">
             I'm a software engineer specializing in building and designing
             exceptional interactive websites that run seamlessly across
             platforms & devices.
-          </div>
+          </motion.div>
           <div className="i-title">
             <h4
               className="i-title-more"
               style={{
-                color: darkMode && "#00EE00",
+                color: darkMode && "rgb(120, 30, 209)",
+                fontWeight: 600,
               }}
             >
               I'm also
@@ -111,7 +145,7 @@ const Intro = () => {
           </div>
 
           {/* <img src={test} alt="" className="p-img" /> */}
-        </div>
+        </motion.div>
       </div>
       <div className="i-right">
         <div

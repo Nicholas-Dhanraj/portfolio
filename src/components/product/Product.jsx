@@ -1,12 +1,19 @@
 import "./product.css";
 import Img from "../../img/youtube.png";
 import test from "../../img/youtube.png";
+import { motion } from "framer-motion";
 
 import React from "react";
 
 const Product = ({ img, link, tags, msg }) => {
   return (
-    <div className="product">
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      layout
+      className="product"
+    >
       <div className="p-browser">
         <div
           className="p-circle"
@@ -25,7 +32,7 @@ const Product = ({ img, link, tags, msg }) => {
         <img src={img} alt="" className="p-img" />
       </a>
       {msg}
-    </div>
+    </motion.div>
   );
 };
 

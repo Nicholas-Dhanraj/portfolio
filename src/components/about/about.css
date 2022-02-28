@@ -1,12 +1,13 @@
 .about {
   height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   /* background: rgb(177, 171, 171); */
 }
 
 .a-left {
-  flex: 1;
+  flex: 0.8;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +18,8 @@
 .a-right {
   flex: 1;
   margin-top: -100px;
+  margin-right: 20px;
+  /* overflow: hidden; */
 }
 
 .a-card {
@@ -47,17 +50,26 @@
 }
 
 .a-title {
-  font-weight: 400;
+  font-weight: s00;
 }
 
 .a-sub {
   margin: 20px 0px;
+  font-size: 1.1rem;
+
+  font-weight: 700;
 }
 
 .a-desc {
-  font-weight: 300;
+  margin: 20px 0px;
+  font-size: 1.1rem;
+
+  font-weight: 400;
 }
 
+.a-desc:last-child {
+  margin: 0px 0px;
+}
 .a-award {
   margin-top: 50px;
   display: flex;
@@ -81,6 +93,7 @@
     flex-direction: column;
     text-align: center;
     margin-top: 50px;
+    height: auto;
   }
 
   .a-left {
@@ -101,5 +114,8 @@
 
   .a-award {
     display: none;
+  }
+  .a-title {
+    margin-top: 15vh;
   }
 }

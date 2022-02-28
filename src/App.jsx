@@ -36,6 +36,7 @@ function App() {
   const [active, setActive] = useState(true);
   const [loading, setLoading] = useState(true);
   const tl = new TimelineLite();
+
   // useEffect(() => {
   //   if (loading) {
   //     gsap.to(boxRef.current, {
@@ -98,16 +99,17 @@ function App() {
 
   return (
     <div
+      className="App"
       style={{
         backgroundColor: darkMode ? "#000000" : "#f8eee7",
-        color: darkMode && "white",
+        color: darkMode && "#FFFFFF",
         textInputStyle: darkMode && "yellow",
       }}
     >
       {/* <Navbar /> */}
-
       {/* <Toggle /> */}
       {/* {loading && <Splash />} */}
+
       {loading && (
         <div ref={boxRef}>
           <Splash />
@@ -121,7 +123,6 @@ function App() {
         ) : (
           <div ref={boxRef}></div>
         )} */}
-
       {/* <div id="loaded">
         <Splash />
       </div> */}
